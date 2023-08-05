@@ -213,7 +213,7 @@ const predict = () => {
       .then(response => response.json())
       .then(data => {
         document.getElementById('fare_amount').classList.remove('d-none');   //original fare
-        const fareResult = document.getElementById('predicted-fare'); //original fare
+        const fareResult = document.getElementById('predicted-fare_amount'); //original fare
         const fare = Math.round(data['fare_amount'] * 100) / 100
         fareResult.innerText = `$${fare}`;
       })
